@@ -3,6 +3,7 @@ import AppRoutes from "./AppRoutes"; // Importation du composant qui gère la na
 import ErrorBoundary from "./components/ErrorBoundary"; // Importation du gestionnaire d'erreurs global
 import Navbar from "./components/Navbar"; // Importation de la barre de navigation
 import "./index.css"; // Importation du fichier CSS global
+import TestSupabase from "./testSupabase";
 
 // Définition du composant principal `App`
 function App() {
@@ -17,6 +18,8 @@ function App() {
 
         {/* Conteneur des routes (Affichage dynamique en fonction de l'URL) */}
         <AppRoutes />
+
+      <TestSupabase /> {/* Composant temporaire pour tester Supabase */}
         
       </div>
     </ErrorBoundary>

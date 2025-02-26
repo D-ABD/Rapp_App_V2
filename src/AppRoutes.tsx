@@ -5,6 +5,7 @@ import { Routes, Route, Navigate } from "react-router-dom"; // Importation des o
 // Importation des composants de pages
 import Accueil from "./pages/Accueil"; // Page d'accueil
 import APropos from "./pages/APropos"; // Page "À propos"
+import TestSupabase from "./testSupabase";
 
 // Définition du composant `AppRoutes` qui gère la navigation dans l'application
 const AppRoutes: React.FC = () => {
@@ -18,6 +19,10 @@ const AppRoutes: React.FC = () => {
 
       {/* Redirection des pages inconnues vers l'accueil */}
       <Route path="*" element={<Navigate to="/" replace />} />
+
+      {/* Route pour le test supabase */}
+      <Route path="/test-supabase" element={<TestSupabase />} /> {/* ✅ Ajout de la route */}
+
     </Routes>
   );
 };
