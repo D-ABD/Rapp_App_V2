@@ -2,14 +2,11 @@
 module.exports = {
     content: [
       "./index.html",
-      "./src/**/*.{js,ts,jsx,tsx}", // Inclut tous les fichiers JS/TS/JSX/TSX dans le dossier src
+      "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-      extend: {
-        colors: {
-          'custom-blue': '#007bff', // Ajoute une couleur personnalisée
-        },
-      },
+      extend: {},
     },
     plugins: [],
   };
+  
