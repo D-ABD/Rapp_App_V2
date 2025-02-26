@@ -1,9 +1,8 @@
 // src/App.tsx
 import AppRoutes from "./AppRoutes"; // Importation du composant qui gère la navigation (routes de l'application)
 import ErrorBoundary from "./components/ErrorBoundary"; // Importation du gestionnaire d'erreurs global
-import Navbar from "./components/Navbar"; // Importation de la barre de navigation
+import Layout from "./components/Layout/Layout";
 import "./index.css"; // Importation du fichier CSS global
-import TestSupabase from "./testSupabase";
 
 // Définition du composant principal `App`
 function App() {
@@ -13,13 +12,15 @@ function App() {
       {/* Conteneur principal de l'application avec un fond gris clair et une hauteur minimale sur toute la page */}
       <div className="bg-gray-100 min-h-screen">
 
-        {/* Barre de navigation présente sur toutes les pages */}
-        <Navbar />
 
         {/* Conteneur des routes (Affichage dynamique en fonction de l'URL) */}
-        <AppRoutes />
+        {/* Layout avec navabar, footer.. */}
 
-      <TestSupabase /> {/* Composant temporaire pour tester Supabase */}
+        <Layout>
+      <AppRoutes />
+    </Layout>
+
+    
         
       </div>
     </ErrorBoundary>

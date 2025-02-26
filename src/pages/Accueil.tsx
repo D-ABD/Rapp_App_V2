@@ -14,7 +14,7 @@ const Accueil: React.FC = () => {
         </h1>
         {/* Message de confirmation avec Tailwind CSS */}
         <p className="text-xl text-gray-600">
-          Votre application est bien configurée et centrée horizontalement !
+          Votre application est bien configurée et centrée horizontalement . Page Accueil!
         </p>
       </div>
     </div>
