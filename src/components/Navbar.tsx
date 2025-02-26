@@ -1,62 +1,43 @@
+// src/components/Navbar.tsx
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-/**
- * Composant `Navbar`
- * -------------------
- * 📌 Barre de navigation de l'application.
- * 🔗 Contient des liens vers les différentes pages (Accueil, Formations, Dashboard...).
- * 🎨 Utilise des styles en ligne pour la personnalisation.
- */
 const Navbar: React.FC = () => {
   return (
-    <nav style={styles.navbar}>
-      {/* 🏠 Lien vers la page d'accueil */}
-      <Link to="/" style={styles.navLink}>Accueil</Link>
+    <nav className="w-full bg-gradient-to-r from-blue-600 to-indigo-700 shadow-md">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          {/* Logo */}
+          <h1 className="text-white text-2xl font-bold">Rap_App</h1>
 
-      {/* 📚 Lien vers la page des formations */}
-      <Link to="/formations" style={styles.navLink}>Formations</Link>
+          {/* Liens de navigation */}
+          <div className="flex space-x-6">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `text-white text-lg font-semibold transition-colors duration-300 ${
+                  isActive ? "border-b-2 border-white pb-1" : "hover:text-blue-300"
+                }`
+              }
+            >
+              Accueil
+            </NavLink>
 
-      {/* 📊 Lien vers le dashboard */}
-      <Link to="/dashboard" style={styles.navLink}>Dashboard</Link>
-
-      {/* 🆕 Lien vers la section MGO */}
-      <Link to="/mgo" style={styles.navLink}>MGO</Link>
-
-      {/* 🔐 Lien vers la page de connexion */}
-      <Link to="/login" style={styles.navLink}>Login</Link>
-
-      {/* 🏫 Lien vers la gestion des centres */}
-      <Link to="/centres" style={styles.navLink}>Centres</Link>
-
-      {/* 📆 Lien vers la revue hebdomadaire (ajouté récemment) */}
-      <Link to="/revue-hebdo" style={{ color: "white" }}>📆 Revue Hebdo</Link>
-
-      {/* 📚 Lien vers la page des parametres */}
-      <Link to="/parametres" style={styles.navLink}>Parametres</Link>
+            <NavLink
+              to="/a-propos"
+              className={({ isActive }) =>
+                `text-white text-lg font-semibold transition-colors duration-300 ${
+                  isActive ? "border-b-2 border-white pb-1" : "hover:text-blue-300"
+                }`
+              }
+            >
+              À propos
+            </NavLink>
+          </div>
+        </div>
+      </div>
     </nav>
   );
-};
-
-/**
- * 🎨 Styles CSS en ligne
- * 📌 Définition des styles pour la navbar et les liens de navigation.
- */
-const styles: { [key: string]: React.CSSProperties } = {
-  navbar: {
-    width: "100%", // 📏 Prend toute la largeur
-    backgroundColor: "#007bff", // 🎨 Couleur bleue
-    padding: "10px", // 📏 Espace intérieur pour mieux séparer les liens
-    display: "flex", // 🔄 Affichage en ligne des liens
-    justifyContent: "center", // 📌 Centrage des liens
-    gap: "20px", // 🔄 Espacement entre les liens
-  },
-  navLink: {
-    color: "white", // 🎨 Texte blanc pour un bon contraste
-    textDecoration: "none", // ❌ Supprime le soulignement par défaut des liens
-    fontSize: "18px", // 🔠 Taille du texte augmentée pour la lisibilité
-    fontWeight: "bold", // 🏋️‍♂️ Texte en gras pour plus de visibilité
-  },
 };
 
 export default Navbar;

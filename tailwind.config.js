@@ -2,13 +2,12 @@
 module.exports = {
     content: [
       "./index.html",
-      "./src/**/*.{js,ts,jsx,tsx}",
+      "./src/**/*.{js,ts,jsx,tsx}", // Inclut tous les fichiers JS/TS/JSX/TSX dans le dossier src
     ],
     theme: {
       extend: {
         colors: {
-          // Ajoutez une couleur personnalisée
-          'custom-blue': '#007bff',
+          'custom-blue': '#007bff', // Ajoute une couleur personnalisée
         },
       },
     },
