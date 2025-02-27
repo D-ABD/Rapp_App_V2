@@ -36,9 +36,7 @@ const Navbar: React.FC = () => {
         <Link to="/mgo" className="text-white text-lg font-bold no-underline hover:text-blue-200">
           MGO
         </Link>
-        <Link to="/login" className="text-white text-lg font-bold no-underline hover:text-blue-200">
-          Login
-        </Link>
+        
         <Link to="/centres" className="text-white text-lg font-bold no-underline hover:text-blue-200">
           Centres
         </Link>
@@ -53,9 +51,12 @@ const Navbar: React.FC = () => {
           A propos
         </Link>
 
-
         <Link to="/test-supabase" className="text-white text-lg font-bold no-underline hover:text-blue-200">
           Test Supabase
+        </Link>
+
+        <Link to="/login" className="text-white text-lg font-bold no-underline hover:text-blue-200">
+          Login
         </Link>
 
       </div>

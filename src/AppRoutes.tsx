@@ -1,31 +1,37 @@
 // src/AppRoutes.tsx
-import React from "react"; // Importation de React
-import { Routes, Route, Navigate } from "react-router-dom"; // Importation des outils de gestion des routes
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 
-// Importation des composants de pages
-import Accueil from "./pages/Accueil"; // Page d'accueil
-import APropos from "./pages/APropos"; // Page "À propos"
+// Importation des pages
+import Accueil from "./pages/Accueil";
+import APropos from "./pages/APropos";
+import Dashboard from "./pages/Dashboard";
 import TestSupabase from "./testSupabase";
+import Login from "./components/Login";
+import ProtectedRoute from "./components/ProtectedRoute";
+import { useAuth } from "./hooks/useAuth"; // ✅ Import du hook d'authentification
 
-// Définition du composant `AppRoutes` qui gère la navigation dans l'application
+// ✅ Composant qui gère les routes de l'application
 const AppRoutes: React.FC = () => {
+  const { user } = useAuth(); // ✅ Vérifier si l'utilisateur est connecté
+
   return (
     <Routes>
-      {/* Route pour la page d'accueil */}
+      {/* Pages publiques */}
       <Route path="/" element={<Accueil />} />
-
-      {/* Route pour la page "À propos" */}
       <Route path="/a-propos" element={<APropos />} />
+      <Route path="/test-supabase" element={<TestSupabase />} />
+
+      {/* 🔄 Redirection automatique des utilisateurs connectés depuis `/login` */}
+      <Route path="/login" element={user ? <Navigate to="/dashboard" /> : <Login />} />
+
+      {/* Pages protégées (nécessitent une connexion) */}
+      <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
 
       {/* Redirection des pages inconnues vers l'accueil */}
       <Route path="*" element={<Navigate to="/" replace />} />
-
-      {/* Route pour le test supabase */}
-      <Route path="/test-supabase" element={<TestSupabase />} /> {/* ✅ Ajout de la route */}
-
     </Routes>
   );
 };
 
-// Exportation du composant pour l'utiliser dans `App.tsx`
 export default AppRoutes;
