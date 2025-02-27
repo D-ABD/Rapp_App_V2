@@ -2,7 +2,7 @@
 import { describe, test, expect, beforeEach } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import Navbar from "../components/Layout/Navbar";
+import Navbar from "../../components/Layout/Navbar";
 
 describe("Navbar", () => {
   beforeEach(() => {

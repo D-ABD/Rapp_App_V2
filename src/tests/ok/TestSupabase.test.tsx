@@ -2,7 +2,7 @@
 // 📌 Importation des outils nécessaires pour les tests
 import { describe, test, expect } from "vitest"; // ✅ Importation de Vitest (framework de test)
 import { render, screen } from "@testing-library/react"; // ✅ Importation des outils de test React
-import TestSupabase from "../testSupabase"; // ✅ Importation du composant à tester
+import TestSupabase from "../../testSupabase";
 
 // 📌 `describe()` permet de regrouper plusieurs tests sous un même bloc
 describe("TestSupabase", () => {

@@ -1,0 +1,14 @@
+
+Prochaines étapes & Améliorations possibles
+
+🔹 Ajout d’un système d’actualisation automatique des logs toutes les X secondes ⏳
+🔹 Optimisation de la suppression avec une mise à jour de l’état React au lieu de recharger la page ⚡
+🔹 Ajout d’une confirmation avant la suppression d’un log spécifique 🔥
+🔹 Amélioration de l’interface utilisateur (Meilleure UX/UI) 🎨
+🔹 Ajout d’un module de gestion des centres de formation 🏫
+🔹 Ajout de tests unitaires avec Vitest et Testing Library ✅
+🔹 Mise en place du Dashboard (Dashboard.tsx) une fois les données de formations disponibles 📊
+
+🚧 **À faire plus tard :**
+🔹 **Dashboard (`Dashboard.tsx`) affichant les formations avec stats** (Actuellement non réalisé car seules les données utilisateurs sont en base).
+🔹 **Gestion des formations (Affichage, Ajout, Modification, Suppression)**.

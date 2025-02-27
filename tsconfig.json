@@ -6,7 +6,11 @@
   ],
   "compilerOptions": {
     "types": ["vitest/globals"],
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
 
   }
 }

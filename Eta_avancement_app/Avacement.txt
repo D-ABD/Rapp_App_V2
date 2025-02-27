@@ -1,0 +1,91 @@
+### 📌 Avancement du projet Rap_App
+
+Ce fichier contient un état des lieux détaillé de tout ce qui a été réalisé jusqu'à présent sur l'application **Rap_App**, afin de faciliter la reprise du développement.
+
+---
+
+## ✅ 1. Installation & Configuration
+
+✔ **Technologies utilisées** : React, Vite, TypeScript, Tailwind CSS, Supabase, React Query, React Router.
+✔ **Dépendances installées** :
+   - Mise en place des tests Vitest (installation et configuration)
+   - `@supabase/supabase-js` (Connexion à la BDD Supabase)
+   - `@tanstack/react-query` (Gestion du cache et des requêtes API)
+   - `react-router-dom` (Gestion de la navigation)
+   - `react-hook-form` (Gestion des formulaires)
+   - `file-saver` (Export des fichiers CSV)
+✔ **Projet configuré avec Vite + TypeScript**.
+✔ **Dossier `.env` créé avec les clés Supabase**.
+✔ **Configuration de `tailwind.config.js` et ajout des styles Tailwind dans `index.css`**.
+✔ **Création des routes principales dans `AppRoutes.tsx`**.
+✔ **Mise en place d’un `Layout.tsx` avec `Navbar` et `Footer`**.
+✔ **Mise en place de la `ProtectedRoute` pour la protection via `AuthContext`**.
+
+---
+
+## 🔑 2. Authentification & Gestion des utilisateurs
+
+✔ **Connexion, inscription et déconnexion avec Supabase**.
+✔ **Création de `AuthContext.tsx` pour la gestion de l’utilisateur global**.
+✔ **Gestion des rôles et permissions** (Admin / Utilisateur).
+✔ **Protection des routes sensibles avec `ProtectedRoute.tsx`**.
+✔ **Ajout d’un formulaire de connexion (`Login.tsx`) et d’inscription (`SignUp.tsx`)**.
+✔ **Affichage du nom de l’utilisateur connecté dans la Navbar**.
+
+---
+
+## 📊 3. Base de données & Supabase
+
+✔ **Création de la table principale dans Supabase :**
+   - `users` (Gestion des utilisateurs)
+✔ **Ajout d’un trigger SQL pour enregistrer automatiquement les actions des utilisateurs**.
+✔ **Index SQL optimisés pour les performances des requêtes**.
+
+---
+
+## 🏗️ 4. Composants & Fonctionnalités principales
+
+✔ **Historique des actions utilisateurs (`AppLog.tsx`)**.
+✔ **Page des paramètres (`Parametres.tsx`) regroupant plusieurs sections**.
+✔ **Mise en place de React Query (`useQuery`) pour optimiser les requêtes Supabase**.
+✔ **Ajout de `withQueryClient` pour simplifier l’intégration de React Query dans les tests**.
+
+---
+
+## 🔍 5. Filtres, Recherche & Pagination
+
+✔ **Ajout d’un champ de recherche pour filtrer les logs par utilisateur ou action**.
+✔ **Ajout de filtres par date (`date de début` et `date de fin`)**.
+✔ **Mise en place d’une pagination pour afficher 10 logs par page**.
+✔ **Gestion des boutons "Précédent / Suivant" dans la pagination**.
+
+---
+
+## 📥 6. Export & Suppression des logs
+
+✔ **Ajout d’un bouton "📥 Exporter en CSV" permettant de télécharger les logs**.
+✔ **Utilisation de `file-saver` pour le téléchargement des fichiers**.
+✔ **Suppression d’un log individuel avec confirmation (`deleteLog` fonctionnelle)**.
+✔ **Ajout d’un bouton "🗑️ Vider l’historique" pour supprimer tous les logs**.
+
+---
+
+## 🧪 7. Mise en place des tests automatisés
+
+✔ **Installation et configuration de Vitest**.
+✔ **Création de tests unitaires et d’intégration pour :**
+   - `useLogsUtilisateurs` (Vérification des logs récupérés via Supabase)
+   - `AuthProvider` (Gestion de l’authentification et récupération de l’utilisateur connecté)
+   - `AppLog` (Affichage correct des logs)
+   - `Navbar` (Affichage conditionnel en fonction de l’état de connexion)
+   - `formatDate` (Formatage des dates pour affichage correct)
+✔ **Ajout de `withQueryClient` pour simplifier les tests avec React Query**.
+✔ **Correction des erreurs de test liées au chargement asynchrone avec `waitFor`**.
+✔ **Tests exécutés avec succès (`npm run test`) et validés**.
+
+---
+
+📌 **Ce fichier permet de savoir précisément où en est le développement de l’application et quelles sont les prochaines tâches à réaliser.**
+
+🎯 **Dernière mise à jour :** [Date d’aujourd’hui]
+
