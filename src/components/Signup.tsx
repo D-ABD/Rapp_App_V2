@@ -1,4 +1,4 @@
-
+// src/components/Signup.tsx
 import { useState } from "react";
 import { signUp } from "../supabaseClient";
 
