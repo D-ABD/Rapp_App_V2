@@ -26,6 +26,8 @@ const AppRoutes: React.FC = () => {
       {/* 🔄 Redirection automatique des utilisateurs connectés depuis `/login` */}
       <Route path="/login" element={user ? <Navigate to="/dashboard" /> : <Login />} />
 
+
+
       {/* Pages protégées (nécessitent une connexion) */}
       <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
       <Route path="/parametres" element={<ProtectedRoute><Parametres /></ProtectedRoute>} /> {/* ✅ Route protégée */}

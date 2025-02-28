@@ -1,0 +1,1 @@
+INSERT INTO "public"."centres" ("id", "nom") VALUES ('2', 'Centre Formation Paris'), ('3', 'Centre Paris'), ('4', 'Centre Lyon');

@@ -1,14 +1,24 @@
+🚀 Mise en place du Frontend avec React + Vite + TypeScript + TailwindCSS
+Nous allons maintenant créer l'interface utilisateur de ton application avec React, Vite, TypeScript et TailwindCSS. Voici les étapes que nous allons suivre :
 
-Prochaines étapes & Améliorations possibles
+📌 1️ Création du projet avec Vite
+📌 2️ Installation et configuration de TailwindCSS
+📌 3 Installation et configuration de vittest
+📌 4 Installation des dépendances nécessaires
+📌 5 Configuration de Supabase
+📌 6 Configuration des composants login / SignUp
+📌 7 Création des Pages Principales
 
-🔹 Ajout d’un système d’actualisation automatique des logs toutes les X secondes ⏳
-🔹 Optimisation de la suppression avec une mise à jour de l’état React au lieu de recharger la page ⚡
-🔹 Ajout d’une confirmation avant la suppression d’un log spécifique 🔥
-🔹 Amélioration de l’interface utilisateur (Meilleure UX/UI) 🎨
-🔹 Ajout d’un module de gestion des centres de formation 🏫
-🔹 Ajout de tests unitaires avec Vitest et Testing Library ✅
-🔹 Mise en place du Dashboard (Dashboard.tsx) une fois les données de formations disponibles 📊
 
-🚧 **À faire plus tard :**
-🔹 **Dashboard (`Dashboard.tsx`) affichant les formations avec stats** (Actuellement non réalisé car seules les données utilisateurs sont en base).
-🔹 **Gestion des formations (Affichage, Ajout, Modification, Suppression)**.
+📜 Création de src/pages/Dashboard.tsx :
+
+
+
+
+🚀 Prochaine étape
+Maintenant que le projet de base est fonctionnel, nous pouvons :
+
+Créer les composants pour afficher les formations, les centres, etc.
+Ajouter les appels API vers la base de données Supabase
+Améliorer l’interface utilisateur avec des tableaux et des graphiques
+Tester l’application avec Jest et React Testing Library

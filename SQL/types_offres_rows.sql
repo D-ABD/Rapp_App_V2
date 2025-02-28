@@ -1,0 +1,1 @@
+INSERT INTO "public"."types_offres" ("id", "nom") VALUES ('1', 'Formation Intensive'), ('2', 'Formation diplômante'), ('3', 'Formation continue');

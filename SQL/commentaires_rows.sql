@@ -1,0 +1,1 @@
+INSERT INTO "public"."commentaires" ("id", "formation_id", "contenu", "auteur", "created_at") VALUES ('4', '5', 'Super formation', 'Admin', '2025-02-27 10:31:34.692912');

@@ -1,0 +1,1 @@
+INSERT INTO "public"."statuts" ("id", "nom", "couleur") VALUES ('1', 'En Cours', '#0000FF'), ('2', 'Complet', '#008000'), ('3', 'Quasi Complet', '#FFA500'), ('4', 'À Recruter', '#FF0000'), ('5', 'Annulée', '#808080');

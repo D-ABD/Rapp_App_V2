@@ -1,0 +1,1 @@
+INSERT INTO "public"."users" ("id", "email", "nom", "role", "created_at") VALUES ('720ac459-0ced-4b5c-8901-b2e70cd72d15', 'test@example.com', 'Utilisateur Modifié', 'user', '2025-02-27 00:16:33.201924');
